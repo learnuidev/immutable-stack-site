@@ -21,10 +21,8 @@
 
 (defn chapter-page []
   (let [_ (fetch-chapter)
-        html (m/md->html  (:current-chapter @chapter-state)
-                          :header-style (str "class=header"))]
+        html (m/md->html  (:current-chapter @chapter-state))]
    [:div.m-8
-    [:h1 "Chapter 1: Introduction"]
     [:div {:dangerouslySetInnerHTML {:__html html}}]]))
 
 

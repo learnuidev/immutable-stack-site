@@ -6,10 +6,10 @@
 
 
 (defn splash-page []
-  [:div.my-16.mx-8.md:mx-16
-   [:h1.uppercase.text-5xl.break-words.md:text-8xl.lg:8xl "Immutable" [:div [:strong " Stack"]]]
-   [:div.my-8.sm:my-4
-    [:h3.text-xl.font-light.md:text-2xl "Learn how to "
+  [:div.my-16.mx-8.md:mx-24
+   [:h1.uppercase.text-6xl.break-words.md:text-8xl.lg:text-9xl "Immutable" [:div [:strong " Stack"]]]
+   [:div.my-4.md:my-8
+    [:h3.text-xl.font-light.md:text-3xl "Learn how to "
      [:span.font-medium "build, test, maintain "]
      [:span "and "]
      [:strong.font-medium "deploy "]
@@ -17,10 +17,10 @@
      [:strong "aws cloud "]
      [:span " using "]
      [:strong "the immutable stack"]]
-    [:div.my-8
+    [:div.my-8.md:my-12
      [:> Link {:title "Read the Guide"
                :href "/book/01"
-               :className "px-8"}]]]])
+               :className "px-8 py-4 lg:text-xl lg:px-12"}]]]])
 
 
 (defn landing-page []
