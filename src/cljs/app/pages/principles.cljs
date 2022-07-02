@@ -1,4 +1,4 @@
 (ns app.pages.principles)
 
 (defn principles-page []
-  [:div "Principles Page"])
+  [:div.m-8 "Principles Page"])

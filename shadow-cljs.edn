@@ -3,7 +3,9 @@
                  ;; main routing lib
                 [metosin/reitit "0.5.11"]
                 [metosin/reitit-spec  "0.5.11"]
-                [metosin/reitit-frontend "0.5.11"]]
+                [metosin/reitit-frontend "0.5.11"]
+                ;; markdown parser
+                [markdown-clj "1.11.1"]]
 
  :builds
  {:app {:asset-path "/js"

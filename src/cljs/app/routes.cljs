@@ -13,7 +13,9 @@
             [app.pages.profile :refer [profile-page]]
             [app.pages.mental-model :refer [mental-model-page]]
             [app.pages.principles :refer [principles-page]]
-            [app.pages.mentors :refer [mentors-page]]))
+            [app.pages.book :refer [book-page]]
+            [app.pages.chapter :refer [chapter-page]]
+            [app.pages.faq :refer [faq-page]]))
 
 
 (defonce routes-state (r/atom nil))
@@ -54,12 +56,16 @@
                    :view #'principles-page}]
    ["/mental-model" {:name :routes/mental-models
                      :view #'mental-model-page}]
-   ["/mentors" {:name :routes/mentors
-                :view #'mentors-page}]
-   ["/user/@:username" {:name :routes/profile
-                        :view #'profile-page
-                        :parameters
-                        {:path {:username string?}}}]])
+   ["/faq" {:name :routes/faq
+            :view #'faq-page}]
+   ["/book" {:name :routes/book
+             :view #'book-page}]
+   ["/book/:chapter" {:name :routes/chapter
+                      :view #'chapter-page}]
+   ["/user/:username" {:name :routes/profile
+                       :view #'profile-page
+                       :parameters
+                       {:path {:username string?}}}]])
                         ; :controllers
                         ; [{:params (fn [match]
                         ;             (:path (:parameters match)))
