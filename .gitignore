@@ -1,0 +1,15 @@
+node_modules
+public/js
+out
+.shadow-cljs
+.nrepl-port
+.clj-kondo/.cache
+yarn-error.log
+report.html
+.cpcache
+.clj-kondo
+.vscode
+public/css/style.css
+src/cljs/app/config.cljs
+src/gen
+.lsp

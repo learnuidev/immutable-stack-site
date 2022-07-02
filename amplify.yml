@@ -1,0 +1,18 @@
+frontend:
+    phases:
+        preBuild:
+            commands:
+                # Step 1: Enable the yum repository in Amazon Linux 2.
+                - amazon-linux-extras enable corretto8
+                # Step 2: Install Amazon Corretto 8 as JDK
+                #  - Installation location is: /usr/jvm/java-1.8.0-amazon-corretto.<cpu_arch>.
+                - yum -y install java-1.8.0-amazon-corretto-devel
+                # Step 3: Verify Your Installation
+                - java -version
+                - yarn
+        build:
+            commands: [yarn build]
+    artifacts:
+        baseDirectory: public/
+        files:
+            - '**/*'

@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "jsx": "react-jsx",
+        "importHelpers": true,
+        "strict": false,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "noEmit": true,
+        "rootDir": "src/js/",
+        "baseUrl": "src/js",
+        "paths": {
+            "@/*": [
+                "./*"
+            ]
+        }
+    },
+    "include": [
+        "src/js/**/*.tsx",
+        "src/js/**/*.ts"
+    ]
+}

@@ -1,0 +1,23 @@
+{:dependencies [[reagent "1.0.0"]
+                [devcards "0.2.6"]
+                 ;; main routing lib
+                [metosin/reitit "0.5.11"]
+                [metosin/reitit-spec  "0.5.11"]
+                [metosin/reitit-frontend "0.5.11"]]
+
+ :builds
+ {:app {:asset-path "/js"
+        :modules {:main {:init-fn app.core/main}}
+        :output-dir "public/js"
+        :target :browser
+        :js-options {:resolve {"http2" false
+                               "aws-crt" false}}}
+  :test {:ns-regexp "app.cards"
+         :output-to "out/test.js"
+         :target :node-test}
+  :e2e {:ns-regexp "e2e.*"
+        :output-to "out/e2e.js"
+        :target :node-test}}
+ :dev-http {3000 "public"}
+ :nrepl {:port 3333}
+ :source-paths ["src/cljs" "src/js" "src/gen"]}
